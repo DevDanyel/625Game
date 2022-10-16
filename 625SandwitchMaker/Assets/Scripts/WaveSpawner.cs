@@ -7,21 +7,15 @@ public class WaveSpawner : MonoBehaviour
     public GameObject GoodObjectPrefab;
 
     void Start(){
-        StartCoroutine(ExampleCoroutine());
-        SpawnWave(6);
+        StartCoroutine(SpawnWave(6));
     }
 
-    void SpawnWave(int waveSize){
+    IEnumerator SpawnWave(int waveSize){
+        yield return new WaitForSeconds(5);
         for(int i = 0; i <= waveSize; i++){
             Instantiate(GoodObjectPrefab, new Vector3(Random.Range(2, -2), 3, 0), Quaternion.identity);
-            StartCoroutine(ExampleCoroutine());
+            yield return new WaitForSeconds(5);
         }
     }
 
-
-    IEnumerator ExampleCoroutine()
-    {
-        //yield on a new YieldInstruction that waits for 5 seconds.
-        yield return new WaitForSeconds(5);
-    }
 }
