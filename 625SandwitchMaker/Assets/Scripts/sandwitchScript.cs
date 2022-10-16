@@ -8,30 +8,51 @@ public class sandwitchScript : MonoBehaviour
     public Sprite[] goodIngre;
 
     public PrefabScript ps;
+    public int currStackNum;
+
+    void Start(){
+        currStackNum = 0;
+    }
+
+
+
+    void UpdateStackNum(){
+        if(currStackNum <= 6){
+            currStackNum++;
+        }
+
+        //if over max then would call an end game function or something. 
+    }
+
+
+    void AddToStack(int ingreNum){
+        stackedSandwitch[currStackNum].GetComponent<SpriteRenderer>().sprite = goodIngre[ingreNum];
+        UpdateStackNum();
+    }
 
     void OnTriggerEnter2D(Collider2D col)
     {
         if(col.CompareTag("GoodIngre")){
             if(col.GetComponent<SpriteRenderer>().sprite.name == "ingrediants_0"){  //bacon
-                stackedSandwitch[0].GetComponent<SpriteRenderer>().sprite = goodIngre[0];
+                AddToStack(0);
             }
             if(col.GetComponent<SpriteRenderer>().sprite.name == "ingrediants_1"){  //onions
-                stackedSandwitch[0].GetComponent<SpriteRenderer>().sprite = goodIngre[1];
+                AddToStack(1);
             }
             if(col.GetComponent<SpriteRenderer>().sprite.name == "ingrediants_2"){   //cheese
-                stackedSandwitch[0].GetComponent<SpriteRenderer>().sprite = goodIngre[2];
+                AddToStack(2);
             }
             if(col.GetComponent<SpriteRenderer>().sprite.name == "ingrediants_3"){   //tomatoes
-                stackedSandwitch[0].GetComponent<SpriteRenderer>().sprite = goodIngre[3];
+                AddToStack(3);
             }
             if(col.GetComponent<SpriteRenderer>().sprite.name == "ingrediants_4"){  //Ham
-                stackedSandwitch[0].GetComponent<SpriteRenderer>().sprite = goodIngre[4];
+                AddToStack(4);
             }
             if(col.GetComponent<SpriteRenderer>().sprite.name == "ingrediants_5" || col.GetComponent<SpriteRenderer>().sprite.name == "ingrediants_6" ){  //mayo must
-                stackedSandwitch[0].GetComponent<SpriteRenderer>().sprite = goodIngre[5];
+                AddToStack(5);
             }
             if(col.GetComponent<SpriteRenderer>().sprite.name == "ingrediants_7"){  //pickles
-                stackedSandwitch[0].GetComponent<SpriteRenderer>().sprite = goodIngre[6];
+                AddToStack(6);
             }
 
             
