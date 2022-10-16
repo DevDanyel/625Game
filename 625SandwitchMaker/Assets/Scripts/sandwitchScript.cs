@@ -19,6 +19,7 @@ public class sandwitchScript : MonoBehaviour
     void UpdateStackNum(){
         if(currStackNum <= 6){
             currStackNum++;
+            //would also like to extend the reach of the collider
         }
 
         //if over max then would call an end game function or something. 
