@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     public void HowToPlay(){
         HowToPlayScreen.SetActive(true);
         startScreen.SetActive(false);
+        spawner.SetActive(false);
     }
 
 

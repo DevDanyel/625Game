@@ -6,7 +6,8 @@ public class WaveSpawner : MonoBehaviour
 {
     public GameObject GoodObjectPrefab;
 
-    void Start(){
+
+    void OnEnable(){
         StartCoroutine(SpawnWave(6));
     }
 
@@ -17,5 +18,7 @@ public class WaveSpawner : MonoBehaviour
             yield return new WaitForSeconds(5);
         }
     }
+
+
 
 }
