@@ -7,6 +7,8 @@ public class sandwitchScript : MonoBehaviour
     public GameObject[] stackedSandwitch;
     public Sprite[] goodIngre;
 
+    public GameManager gm;
+
     public PrefabScript ps;
     public int currStackNum;
 
@@ -33,27 +35,39 @@ public class sandwitchScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
+        if(col.CompareTag("TopBread")){
+            //call gamemanager next level 
+            gm.NextLevel();
+        }
+        
         if(col.CompareTag("GoodIngre")){
             if(col.GetComponent<SpriteRenderer>().sprite.name == "ingrediants_0"){  //bacon
                 AddToStack(0);
+                gm.IncScore(20);
             }
             if(col.GetComponent<SpriteRenderer>().sprite.name == "ingrediants_1"){  //onions
                 AddToStack(1);
+                gm.IncScore(20);
             }
             if(col.GetComponent<SpriteRenderer>().sprite.name == "ingrediants_2"){   //cheese
                 AddToStack(2);
+                gm.IncScore(20);
             }
             if(col.GetComponent<SpriteRenderer>().sprite.name == "ingrediants_3"){   //tomatoes
                 AddToStack(3);
+                gm.IncScore(20);
             }
             if(col.GetComponent<SpriteRenderer>().sprite.name == "ingrediants_4"){  //Ham
                 AddToStack(4);
+                gm.IncScore(20);
             }
             if(col.GetComponent<SpriteRenderer>().sprite.name == "ingrediants_5" || col.GetComponent<SpriteRenderer>().sprite.name == "ingrediants_6" ){  //mayo must
                 AddToStack(5);
+                gm.IncScore(20);
             }
             if(col.GetComponent<SpriteRenderer>().sprite.name == "ingrediants_7"){  //pickles
                 AddToStack(6);
+                gm.IncScore(20);
             }
 
             

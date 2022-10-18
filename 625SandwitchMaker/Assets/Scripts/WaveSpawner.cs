@@ -5,6 +5,7 @@ using UnityEngine;
 public class WaveSpawner : MonoBehaviour
 {
     public GameObject GoodObjectPrefab;
+    public GameObject topbread;
 
 
     void OnEnable(){
@@ -17,7 +18,10 @@ public class WaveSpawner : MonoBehaviour
             Instantiate(GoodObjectPrefab, new Vector3(Random.Range(2f, -2f), 3, 0), Quaternion.identity);
             yield return new WaitForSeconds(5);
         }
+        Instantiate(topbread, new Vector3(Random.Range(2f, -2f), 3, 0), Quaternion.identity);
     }
+
+
 
 
 
