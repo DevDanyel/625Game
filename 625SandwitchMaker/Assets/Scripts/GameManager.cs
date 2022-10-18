@@ -6,6 +6,8 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+
+    public sandwitchScript ss;
     public GameObject startScreen;
     public GameObject HowToPlayScreen;
     public GameObject transisionScreen;
@@ -49,6 +51,7 @@ public class GameManager : MonoBehaviour
         levelNum.text = "LEVEL" + currLevel;
         currLevel++;
         score.text = ""+currScore;
+        ss.RestartStack();
     }
 
     public void IncScore(int value){

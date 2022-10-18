@@ -11,7 +11,7 @@ public class PrefabScript : MonoBehaviour
     void Start()
     {
         m_SpriteRenderer = GetComponent<SpriteRenderer>();
-        m_SpriteRenderer.sprite = goodIngre[Random.Range(0, 9)];
+        m_SpriteRenderer.sprite = goodIngre[Random.Range(0, 7)];
     }
 
     // Update is called once per frame

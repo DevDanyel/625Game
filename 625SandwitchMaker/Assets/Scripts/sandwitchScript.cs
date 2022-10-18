@@ -33,6 +33,14 @@ public class sandwitchScript : MonoBehaviour
         UpdateStackNum();
     }
 
+    public void RestartStack(){
+        foreach (GameObject ingr in stackedSandwitch)
+        {
+            ingr.GetComponent<SpriteRenderer>().sprite = null;
+        }
+        currStackNum = 0;
+    }
+
     void OnTriggerEnter2D(Collider2D col)
     {
         if(col.CompareTag("TopBread")){
