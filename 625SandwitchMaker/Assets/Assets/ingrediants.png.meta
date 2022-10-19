@@ -318,48 +318,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ingrediants_12
-      rect:
-        serializedVersion: 2
-        x: 1207
-        y: 1492
-        width: 61
-        height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7e417d265e859134486ec3fdad21a071
-      internalID: -1766755840
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ingrediants_13
-      rect:
-        serializedVersion: 2
-        x: 1278
-        y: 1501
-        width: 57
-        height: 87
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7cd56732ac748044d9cf5878843dd2cc
-      internalID: -680307640
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: ingrediants_14
       rect:
         serializedVersion: 2
@@ -444,48 +402,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ingrediants_18
-      rect:
-        serializedVersion: 2
-        x: 1149
-        y: 1453
-        width: 56
-        height: 57
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f5e7d07f96d92d24c838d894ce27aedc
-      internalID: -894981238
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ingrediants_19
-      rect:
-        serializedVersion: 2
-        x: 1174
-        y: 1476
-        width: 53
-        height: 53
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c67f50f68f2ad424eb310a883d8afff0
-      internalID: 380140113
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: ingrediants_20
       rect:
         serializedVersion: 2
@@ -531,10 +447,10 @@ TextureImporter:
       name: ingrediants_22
       rect:
         serializedVersion: 2
-        x: 1081
-        y: 1396
-        width: 93
-        height: 76
+        x: 1082
+        y: 1385
+        width: 258
+        height: 201
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -935,7 +851,7 @@ TextureImporter:
         width: 254
         height: 156
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class sandwitchScript : MonoBehaviour
 {
+    public HealthBar hb;
     public GameObject[] stackedSandwitch;
     public Sprite[] goodIngre;
 
@@ -22,9 +23,8 @@ public class sandwitchScript : MonoBehaviour
         if(currStackNum <= 6){
             currStackNum++;
             //would also like to extend the reach of the collider
+            
         }
-
-        //if over max then would call an end game function or something. 
     }
 
 
@@ -41,11 +41,16 @@ public class sandwitchScript : MonoBehaviour
         currStackNum = 0;
     }
 
+
     void OnTriggerEnter2D(Collider2D col)
     {
         if(col.CompareTag("TopBread")){
             //call gamemanager next level 
             gm.NextLevel();
+        }
+
+        if(col.CompareTag("badIngre")){
+            hb.LoseHealth(10);
         }
         
         if(col.CompareTag("GoodIngre")){
