@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 
     public HealthBar hb;
     public sandwitchScript ss;
+    public WaveSpawner ws;
     public GameObject startScreen;
     public GameObject HowToPlayScreen;
     public GameObject transisionScreen;
@@ -72,6 +73,10 @@ public class GameManager : MonoBehaviour
         score.text = ""+currScore;
         ss.RestartStack();
         healthBar.SetActive(false);
+        if(ws.waveSpeed !> 3.2){
+            ws.waveSpeed *= .9f;
+        }
+        
     }
 
     public void IncScore(int value){
