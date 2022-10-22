@@ -14,7 +14,7 @@ public class HealthBar : MonoBehaviour
 
     void Start(){
         P2Health = maxHealth;
-        P2HealthBar.fillAmount = 0;
+        P2HealthBar.fillAmount = 1;
     }
 
     public void LoseHealth(float hitPower){
