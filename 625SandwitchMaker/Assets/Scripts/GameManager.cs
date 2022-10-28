@@ -7,6 +7,9 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
 
+    public Sprite[] experimentEmots;
+    public SpriteRenderer  experimentSkin;
+
     public HealthBar hb;
     public sandwitchScript ss;
     public WaveSpawner ws;
@@ -35,6 +38,7 @@ public class GameManager : MonoBehaviour
         healthBar.SetActive(false);
         currLevel = 0;
         levelNum.text = "LEVEL" + currLevel;
+        experimentSkin.sprite = experimentEmots[0];
     }
 
     void Update(){
@@ -44,6 +48,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void startGame(){
+        experimentSkin.sprite = experimentEmots[0];
         EndGameScreen.SetActive(false);
         startScreen.SetActive(false);
         HowToPlayScreen.SetActive(false);
@@ -61,6 +66,27 @@ public class GameManager : MonoBehaviour
         EndGameScreen.SetActive(false);
         healthBar.SetActive(false);
     }
+    
+    public void PauseBtn(){
+        experimentSkin.sprite = experimentEmots[1];// make this screen the pause screen and thats it
+        startScreen.SetActive(false);
+        spawner.SetActive(false);
+        transisionScreen.SetActive(false);
+        EndGameScreen.SetActive(false);
+        healthBar.SetActive(false);
+    }
+    
+
+    /* // not done yet this one needs a lot more 
+    public void QuitBtn(){
+        HowToPlayScreen.SetActive(true);
+        startScreen.SetActive(false);
+        spawner.SetActive(false);
+        transisionScreen.SetActive(false);
+        EndGameScreen.SetActive(false);
+        healthBar.SetActive(false);
+    }
+    */
 
     public void NextLevel(){
         EndGameScreen.SetActive(false);
