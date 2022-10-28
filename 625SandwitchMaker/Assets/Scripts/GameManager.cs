@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
 
     public Sprite[] experimentEmots;
     public SpriteRenderer  experimentSkin;
+    public GameObject Playbtn;
+    public GameObject pauseBtn;
 
     public HealthBar hb;
     public sandwitchScript ss;
@@ -36,6 +38,8 @@ public class GameManager : MonoBehaviour
         spawner.SetActive(false);
         transisionScreen.SetActive(false);
         healthBar.SetActive(false);
+        Playbtn.SetActive(false);
+        pauseBtn.SetActive(false);
         currLevel = 0;
         levelNum.text = "LEVEL" + currLevel;
         experimentSkin.sprite = experimentEmots[0];
@@ -55,6 +59,8 @@ public class GameManager : MonoBehaviour
         spawner.SetActive(true);
         transisionScreen.SetActive(false);
         healthBar.SetActive(true);
+        Playbtn.SetActive(false);
+        pauseBtn.SetActive(true);
 
     }
 
@@ -74,6 +80,8 @@ public class GameManager : MonoBehaviour
         transisionScreen.SetActive(false);
         EndGameScreen.SetActive(false);
         healthBar.SetActive(false);
+        Playbtn.SetActive(true);
+        pauseBtn.SetActive(false);
     }
     
 
