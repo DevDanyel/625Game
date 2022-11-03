@@ -29,6 +29,7 @@ public class HealthBar : MonoBehaviour
     void Update(){
         if(P2Health == 0){
             gm.EndGame();
+            gm.RestartScore();
         }
     }
     

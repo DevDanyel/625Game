@@ -113,6 +113,11 @@ public class GameManager : MonoBehaviour
         
     }
 
+    public void RestartScore(){
+        currScore =0;
+        finalScore =0;
+    }
+
     public void IncScore(int value){
         currScore += value;
     }
@@ -128,7 +133,6 @@ public class GameManager : MonoBehaviour
         EndGameScore.text = ""+finalScore;
         ss.RestartStack();
         healthBar.SetActive(false);
-        currScore =0;
         hb.P2Health = hb.maxHealth;
         hb.UpdateHealth(hb.maxHealth, hb.P2Health);
     }
