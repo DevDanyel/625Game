@@ -7,6 +7,8 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
 
+    public PrefabScript[] ps;
+
     public Sprite[] experimentEmots;
     public SpriteRenderer  experimentSkin;
     public GameObject Playbtn;
@@ -135,6 +137,17 @@ public class GameManager : MonoBehaviour
         healthBar.SetActive(false);
         hb.P2Health = hb.maxHealth;
         hb.UpdateHealth(hb.maxHealth, hb.P2Health);
+        NukePrefabs(); 
+    }
+
+
+    public void NukePrefabs(){
+        ps = FindObjectsOfType<PrefabScript>();
+        foreach(PrefabScript script in ps)
+        {
+            script.RedBTN();
+        }
+        
     }
 
 

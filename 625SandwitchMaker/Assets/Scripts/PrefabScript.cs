@@ -21,4 +21,8 @@ public class PrefabScript : MonoBehaviour
         Destroy(this.gameObject);
        } 
     }
+
+    public void RedBTN(){
+        Destroy(this.gameObject);
+    }
 }
