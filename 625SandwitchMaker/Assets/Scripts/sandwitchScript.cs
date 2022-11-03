@@ -83,8 +83,6 @@ public class sandwitchScript : MonoBehaviour
                 gm.IncScore(20);
             }
 
-            
-            Debug.Log(col.GetComponent<SpriteRenderer>().sprite.name);
         }
     }
 }
